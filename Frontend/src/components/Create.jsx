@@ -10,7 +10,7 @@ function Create() {
         const form = new FormData();
         form.set('caption', caption);
         form.set('link', link);
-        const {data} =await axios.post('http://localhost:3000/api/create',form,{
+        const {data} =await axios.post('https://pic-share-omega.vercel.app/api/create',form,{
                 headers:{
                     'auth':localStorage.getItem('auth')
                 }

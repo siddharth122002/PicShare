@@ -12,7 +12,7 @@ function Register() {
   const register = async(e)=>{
     e.preventDefault();
     try{
-      const {data} =await axios.post('http://localhost:3000/api/register',{
+      const {data} =await axios.post('https://pic-share-omega.vercel.app/api/register',{
         username,
         email,
         password,

@@ -8,7 +8,7 @@ const Followers = () => {
   useEffect(() => {
     const fetchFollowers = async () => {
       try {
-        const { data } = await axios.get(`http://localhost:3000/api/${params.id}/followers`, {
+        const { data } = await axios.get(`https://pic-share-omega.vercel.app/api/${params.id}/followers`, {
           headers: {
             'auth': localStorage.getItem('auth')
           }

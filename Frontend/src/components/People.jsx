@@ -5,7 +5,7 @@ function People() {
   const [users, setUsers] = useState([]);
   useEffect(()=>{
     const getUsers = async()=>{
-        const {data} = await axios.get('http://localhost:3000/api/people',{
+        const {data} = await axios.get('https://pic-share-omega.vercel.app/api/people',{
           headers:{
             'auth':localStorage.getItem('auth')
           }

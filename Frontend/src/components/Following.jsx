@@ -7,7 +7,7 @@ const Following = () => {
     useEffect(() => {
       const fetchfollowing = async () => {
         try {
-          const { data } = await axios.get(`http://localhost:3000/api/${params.id}/following`, {
+          const { data } = await axios.get(`https://pic-share-omega.vercel.app/api/${params.id}/following`, {
             headers: {
               'auth': localStorage.getItem('auth')
             }
@@ -24,7 +24,7 @@ const Following = () => {
     useEffect(() => {
       const current = async () => {
         try {
-          const { data } = await axios.get(`http://localhost:3000/api/current`, {
+          const { data } = await axios.get(`https://pic-share-omega.vercel.app/api/current`, {
             headers: {
               'auth': localStorage.getItem('auth')
             }
@@ -39,7 +39,7 @@ const Following = () => {
     }, []);
 
   const handleUnfollow = async(id) => {
-    const {data} =await axios.get(`http://localhost:3000/api/post/follow/${id}`,{
+    const {data} =await axios.get(`https://pic-share-omega.vercel.app/api/post/follow/${id}`,{
       headers:{
         'auth':localStorage.getItem('auth')
       }

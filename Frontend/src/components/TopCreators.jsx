@@ -6,7 +6,7 @@ function TopCreators() {
   const [creators,setCreators] = useState([])
   useEffect(()=>{
     const getTopCreators = async()=>{
-        const {data} = await axios.get('http://localhost:3000/api/top-creators',{
+        const {data} = await axios.get('https://pic-share-omega.vercel.app/api/top-creators',{
           headers:{
             'auth':localStorage.getItem('auth')
           }

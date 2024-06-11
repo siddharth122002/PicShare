@@ -20,7 +20,7 @@ const Profile = () => {
   const [currentID,setCurrentId]=useState("")
   useEffect(() => {
     const fetchCurrent = async () => {
-      const { data } = await axios.get(`http://localhost:3000/api/current`, {
+      const { data } = await axios.get(`https://pic-share-omega.vercel.app/api/current`, {
         headers: {
           'auth': localStorage.getItem('auth')
         }
@@ -34,7 +34,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const { data } = await axios.get(`http://localhost:3000/api/user/${params.id}`, {
+        const { data } = await axios.get(`https://pic-share-omega.vercel.app/api/user/${params.id}`, {
           headers: {
             'auth': localStorage.getItem('auth')
           }
@@ -53,7 +53,7 @@ const Profile = () => {
     navigate(`/profile/${currentID}/edit`);
   }
   const follow=async(id)=>{
-    const {data} =await axios.get(`http://localhost:3000/api/post/follow/${id}`,{
+    const {data} =await axios.get(`https://pic-share-omega.vercel.app/api/post/follow/${id}`,{
       headers:{
         'auth':localStorage.getItem('auth')
       }

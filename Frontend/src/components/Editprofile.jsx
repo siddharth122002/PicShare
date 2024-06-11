@@ -22,7 +22,7 @@ function Editprofile() {
   useEffect(() => {
     const fetchUserProfile = async () => {
       try {
-        const { data } = await axios.get('http://localhost:3000/api/current', {
+        const { data } = await axios.get('https://pic-share-omega.vercel.app/api/current', {
           headers: {
             'auth': localStorage.getItem('auth')
           }
@@ -53,7 +53,7 @@ function Editprofile() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const {data} = await axios.put(`http://localhost:3000/api/profile/${params.id}/edit`, profileData, {
+      const {data} = await axios.put(`https://pic-share-omega.vercel.app/api/profile/${params.id}/edit`, profileData, {
         headers: {
           'auth': localStorage.getItem('auth')
         }

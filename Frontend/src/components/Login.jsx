@@ -18,7 +18,7 @@ function Login() {
   const Login=async(e)=>{
     e.preventDefault();
     try{
-      const {data} =await axios.post('http://localhost:3000/api/login',{
+      const {data} =await axios.post('https://pic-share-omega.vercel.app/api/login',{
         email,
         password,
       })

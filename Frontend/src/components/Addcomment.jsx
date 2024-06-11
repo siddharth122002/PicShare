@@ -16,7 +16,7 @@ const AddComment = () => {
 
   const fetchPost = async () => {
     try {
-      const { data } = await axios.get(`http://localhost:3000/api/post/${params.id}`, {
+      const { data } = await axios.get(`https://pic-share-omega.vercel.app/api/post/${params.id}`, {
         headers: {
           'auth': localStorage.getItem('auth')
         }
@@ -34,7 +34,7 @@ const AddComment = () => {
   const handleCommentSubmit = async () => {
     if (!newComment) return;
     try {
-      const { data } = await axios.post(`http://localhost:3000/api/post/${params.id}`, { newComment }, {
+      const { data } = await axios.post(`https://pic-share-omega.vercel.app/api/post/${params.id}`, { newComment }, {
         headers: {
           'auth': localStorage.getItem('auth')
         }
@@ -47,7 +47,7 @@ const AddComment = () => {
     }
   };
   const handleDelete=async(id)=>{
-    const { data } = await axios.delete(`http://localhost:3000/api/post/${params.id}/comment/${id}`,{
+    const { data } = await axios.delete(`https://pic-share-omega.vercel.app/api/post/${params.id}/comment/${id}`,{
       headers: {
         'auth': localStorage.getItem('auth')
       }

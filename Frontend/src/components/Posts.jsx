@@ -10,7 +10,7 @@ const Posts = () => {
   const [currentId,setCurrentId]=useState("")
   useEffect(()=>{
     const getPosts=async()=>{
-      const {data} =await axios.get('http://localhost:3000/api/posts',{
+      const {data} =await axios.get('https://pic-share-omega.vercel.app/api/posts',{
         headers:{
           'auth':localStorage.getItem('auth')
         }
@@ -22,7 +22,7 @@ const Posts = () => {
   },[])
 
   const deletes =async (id)=>{
-    const {data} =await axios.delete(`http://localhost:3000/api/post/${id}`,{
+    const {data} =await axios.delete(`https://pic-share-omega.vercel.app/api/post/${id}`,{
       headers:{
         'auth':localStorage.getItem('auth')
       }
@@ -31,7 +31,7 @@ const Posts = () => {
   }
 
   const follow=async(id)=>{
-    const {data} =await axios.get(`http://localhost:3000/api/post/follow/${id}`,{
+    const {data} =await axios.get(`https://pic-share-omega.vercel.app/api/post/follow/${id}`,{
       headers:{
         'auth':localStorage.getItem('auth')
       }
@@ -40,7 +40,7 @@ const Posts = () => {
     
   }
   const likes = async(id)=>{
-    const {data} =await axios.get(`http://localhost:3000/api/post/like/${id}`,{
+    const {data} =await axios.get(`https://pic-share-omega.vercel.app/api/post/like/${id}`,{
       headers:{
         'auth':localStorage.getItem('auth')
       }

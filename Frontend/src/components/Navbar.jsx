@@ -15,7 +15,7 @@ function Navbar() {
   const [avatar,setAvatar]=useState("")
   useEffect(()=>{
     const getID=async()=>{
-      const {data} =await axios.get(`http://localhost:3000/api/current`,{
+      const {data} =await axios.get(`https://pic-share-omega.vercel.app/api/current`,{
         headers:{
           'auth':localStorage.getItem('auth')
         }

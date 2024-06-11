@@ -8,7 +8,7 @@ function Editpost() {
     const navigate = useNavigate()
     useEffect(()=>{
         const getData = async()=>{
-            const {data} = await axios.get(`http://localhost:3000/api/post/${params.id}`,{
+            const {data} = await axios.get(`https://pic-share-omega.vercel.app/api/post/${params.id}`,{
                 headers:{
                     'auth':localStorage.getItem('auth')
                 }
@@ -21,7 +21,7 @@ function Editpost() {
     
     const handler = async(e)=>{
         e.preventDefault();
-        const {data} = await axios.put(`http://localhost:3000/api/post/${params.id}`,{
+        const {data} = await axios.put(`https://pic-share-omega.vercel.app/api/post/${params.id}`,{
             caption,
             file,
         },{
